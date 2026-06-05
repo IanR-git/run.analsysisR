@@ -5,12 +5,16 @@ This git repository contains the files described for the Coursera Getting and Cl
 The data used in this project come from the Human Activity Recognition Using Smartphones Dataset collected using Samsung phones. 
 
 The following files are included:
+
 run_analysis.R
 R script that performs the data cleaning and transformation process.
+
 tidy_data.txt
 Final tidy dataset containing descriptive statistics of each variable for each activity and each subject.
+
 CodeBook.md
 Describes the variables, data, and transformations performed to clean the dataset.
+
 README.md
 Explains the contents of the repository and how the analysis is performed.
 
