@@ -1,0 +1,94 @@
+CodeBook — Coursera Getting and Cleaning Data Project
+
+This dataset is derived from the Human Activity Recognition Using Smartphones Dataset, The goal of this project is to produce a tidy dataset containing the average of selected measurements for each subject and activity.
+
+Variables in the Final Dataset
+
+The final tidy dataset (tidy_data.txt) contains the following variables:
+
+1. Identifiers
+subject
+Integer identifier of the participant (range: 1–30)
+activity
+Descriptive activity label:
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+
+2. Measurement Variables
+
+All other variables represent the average of original sensor measurements, grouped by subject and activity.
+
+These variables are derived from signals measured from the smartphone sensors and include:
+
+Time-domain signals (prefixed with Time)
+Frequency-domain signals (prefixed with Frequency)
+Accelerometer signals (Accelerometer)
+Gyroscope signals (Gyroscope)
+Magnitude signals (Magnitude)
+
+Only variables representing:
+
+mean()
+std()
+
+were included in the analysis.
+
+Each variable in the final dataset represents:
+
+The average value of that measurement for a given subject and activity.
+
+Data Transformations
+
+The following steps were performed in run_analysis.R:
+
+1. Merging Data
+Training and test datasets were combined into a single dataset.
+2. Extracting Relevant Measurements
+Only columns containing:
+mean()
+std()
+were selected.
+3. Activity Labels
+Numeric activity codes were replaced with descriptive names:
+WALKING
+WALKING_UPSTAIRS
+WALKING_DOWNSTAIRS
+SITTING
+STANDING
+LAYING
+4. Variable Naming
+
+Original variable names were cleaned and made more descriptive:
+
+t → Time
+f → Frequency
+Acc → Accelerometer
+Gyro → Gyroscope
+Mag → Magnitude
+Duplicate terms like BodyBody were corrected to Body
+5. Creating Tidy Dataset
+
+A second dataset was created where:
+
+Data is grouped by subject and activity
+The mean of each variable is calculated for each group
+Tidy Data Principles
+
+The final dataset follows tidy data rules:
+
+Each variable forms one column
+Each observation forms one row
+Each type of observational unit forms one table
+Output File
+tidy_data.txt
+Space-separated text file
+Contains averaged measurements for each subject/activity combination
+Ready for downstream statistical analysis
+Notes
+All measurements are normalized sensor signals.
+Missing values were not introduced in the final aggregation step.
+The dataset is suitable for statistical modeling and machine learning tasks.
